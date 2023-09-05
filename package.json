@@ -5,10 +5,14 @@
   "description": "前端工程化练手项目",
   "private": "true",
   "scripts": {
+    "prepare": "husky install",
+    "lint:stylelint": "stylelint \"**/*.{vue,css,less}\"",
+    "lint:stylelint:fix": "pnpm run lint:stylelint --fix",
+    "lint:eslint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 --cache",
+    "lint:eslint:fix": "pnpm run lint:eslint --fix",
     "format": "prettier . --write",
     "home:build": "pnpm --filter miku-homepage build",
-    "home:dev": "pnpm --filter miku-homepage dev",
-    "prepare": "husky install"
+    "home:dev": "pnpm --filter miku-homepage dev"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
@@ -25,6 +29,13 @@
     "eslint-plugin-vue": "^9.17.0",
     "husky": "^8.0.0",
     "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-recommended-less": "^2.0.0",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-prettier": "^4.0.2",
     "typescript": "~5.1.6"
   },
   "license": "MIT"

@@ -8,7 +8,7 @@
 
 js 规范：[Airbnb](https://github.com/airbnb/javascript)
 
-css 规范：[StyleLint 默认规则](https://stylelint.io/)
+css 规范：[stylelint-config-standard](https://stylelint.io/)
 
 ### git 规范
 
