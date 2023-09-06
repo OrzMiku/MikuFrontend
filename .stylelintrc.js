@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   extends: [
     "stylelint-config-standard",
     "stylelint-config-rational-order",
@@ -7,4 +7,7 @@ export default {
     "stylelint-config-recommended-vue",
     "stylelint-prettier/recommended",
   ],
+  rules: {
+    "no-empty-source": null,
+  },
 };
