@@ -1,14 +1,14 @@
 import axios from "axios";
 import type { AxiosRequestConfig, AxiosInstance, AxiosPromise } from "axios";
 
-type mikureqPrimise<T = any> = AxiosPromise<T>;
-type mikureqRequestConfig<D = any> = AxiosRequestConfig<D>;
-type mikureqInstance = AxiosInstance;
+export type mikureqPrimise<T = any> = AxiosPromise<T>;
+export type mikureqRequestConfig<D = any> = AxiosRequestConfig<D>;
+export type mikureqInstance = AxiosInstance;
 
 class mikureq {
   instance: mikureqInstance;
 
-  constructor(baseURL, timeout = 10000) {
+  constructor(baseURL?, timeout = 10000) {
     this.instance = axios.create({
       baseURL,
       timeout,
