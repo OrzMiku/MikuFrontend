@@ -5,21 +5,36 @@ const site = {
    * 站点配置
    */
   // 站点标题
-  title: envs.VITE_SITE_TITLE || "EcyPink",
+  title: envs.VITE_SITE_TITLE || envs.SITE_TITLE || "EcyPink",
   // 站点描述
-  description: envs.VITE_SITE_DESCRIPTION || "神奇の赵贰的个人主页",
+  description:
+    envs.VITE_SITE_DESCRIPTION ||
+    envs.SITE_DESCRIPTION ||
+    "神奇の赵贰的个人主页",
   // 站点关键字
   keywords:
-    envs.VITE_SITE_KEYWORDS || "神奇の赵贰,OrzMiku,个人主页,EcyPink,MikuShow",
+    envs.VITE_SITE_KEYWORDS ||
+    envs.SITE_KEYWORDS ||
+    "神奇の赵贰,OrzMiku,个人主页,EcyPink,MikuShow",
   // 是否显示初音看板娘
-  miku: envs.VITE_MIKU ? envs.VITE_MIKU === "true" : true,
+  miku: ((): boolean => {
+    if (envs.VITE_MIKU) {
+      return envs.VITE_MIKU === "true";
+    }
+    if (envs.MIKU) {
+      return envs.MIKU === "true";
+    }
+    return true;
+  })(),
   // 友情链接
   links: () => {
     if (envs.VITE_SITE_LINKS) {
       return JSON.parse(envs.VITE_SITE_LINKS);
-    } else {
-      return [];
     }
+    if (envs.SITE_LINKS) {
+      return JSON.parse(envs.SITE_LINKS);
+    }
+    return [];
   },
   // 导航栏（path对应站内链接，url对应站外链接）
   navs: () => {
