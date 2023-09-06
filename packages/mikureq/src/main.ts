@@ -8,7 +8,7 @@ export type mikureqInstance = AxiosInstance;
 class mikureq {
   instance: mikureqInstance;
 
-  constructor(baseURL?, timeout = 10000) {
+  constructor(baseURL?: string, timeout: number = 10000) {
     this.instance = axios.create({
       baseURL,
       timeout,
@@ -18,7 +18,7 @@ class mikureq {
   req<T = any>(config?: mikureqRequestConfig): mikureqPrimise<T> {
     return new Promise((resolve, reject) => {
       this.instance
-        .request(config)
+        .request(config as AxiosRequestConfig)
         .then((res) => {
           resolve(res);
         })
