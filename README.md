@@ -6,7 +6,9 @@
 
 ### 技术规范
 
-js 规范：[Airbnb](https://github.com/airbnb/javascript)
+js 规范：~~[Airbnb](https://github.com/airbnb/javascript)~~ eslint:recommended
+
+ts 规范: typescript-eslint/recommended
 
 css 规范：[stylelint-config-standard](https://stylelint.io/)
 
