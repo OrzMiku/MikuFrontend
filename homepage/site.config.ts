@@ -39,7 +39,6 @@ const site = {
   // 导航栏（path对应站内链接，url对应站外链接）
   navs: () => {
     if (envs.VITE_SITE_NAVS) {
-      console.log(envs.VITE_SITE_NAVS);
       return JSON.parse(envs.VITE_SITE_NAVS);
     } else {
       return [

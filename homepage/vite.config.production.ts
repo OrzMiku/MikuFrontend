@@ -1,9 +1,13 @@
 import { defineConfig, loadEnv } from "vite";
 
-loadEnv("development", process.cwd());
+const envs = loadEnv("production", process.cwd());
+
+if (envs.VITE_IS_VERCEL) {
+  console.log(envs);
+}
 
 export default defineConfig({
   define: {
-    envs: process.env,
+    envs,
   },
 });
