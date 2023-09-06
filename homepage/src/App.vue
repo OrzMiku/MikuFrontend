@@ -2,7 +2,7 @@
   <template v-if="site.miku"><miku /></template>
 
   <div class="app">
-    <h1 class="title">EcyPink</h1>
+    <h1 class="title">{{ site.title }}</h1>
     <nav-component />
     <bq><hitokoto /></bq>
     <router-view> </router-view>
