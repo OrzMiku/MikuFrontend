@@ -11,16 +11,13 @@
 | Project Name | 任意 |
 | 环境变量     | 任意 |
 
-| 保持默认配置项   | 值       |
-| ---------------- | -------- |
-| Framework Preset | VITE     |
-| Root Directory   | homepage |
-| Output Dir       | dist     |
-
-| 必须配置项 Build and Output Settings | 值                 |
-| ------------------------------------ | ------------------ |
-| Build Command                        | pnpm -w home:build |
-| Install Command                      | pnpm -w i          |
+| 保持默认配置项   | 值                 |
+| ---------------- | ------------------ |
+| Framework Preset | VITE               |
+| Root Directory   | homepage           |
+| Output Dir       | dist               |
+| Build Command    | pnpm -w home:build |
+| Install Command  | pnpm -w i          |
 
 ## PNPM Script
 
