@@ -16,7 +16,7 @@ import { useSiteConfigStore } from "@/store/site-config";
 import linkcard from "@/components/linkcard.vue";
 
 // 获取友链信息
-const links = useSiteConfigStore().$state.links();
+const links = useSiteConfigStore().$state.links;
 </script>
 
 <style lang="less" scoped></style>

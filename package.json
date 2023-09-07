@@ -12,7 +12,9 @@
     "lint:eslint:fix": "pnpm run lint:eslint --fix",
     "format": "prettier . --write",
     "home:build": "pnpm --filter miku-homepage build",
-    "home:dev": "pnpm --filter miku-homepage dev"
+    "home:build-only": "pnpm --filter miku-homepage build",
+    "home:dev": "pnpm --filter miku-homepage dev",
+    "home:preview": "pnpm --filter miku-homepage preview"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",

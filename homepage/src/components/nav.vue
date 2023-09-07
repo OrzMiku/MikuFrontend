@@ -17,7 +17,8 @@
 import { RouterLink } from "vue-router";
 import { useSiteConfigStore } from "@/store/site-config";
 
-const navs = useSiteConfigStore().$state.navs();
+// 获取nav-item
+const navs = useSiteConfigStore().$state.navs;
 </script>
 
 <style>
