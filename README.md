@@ -2,6 +2,10 @@
 
 前端工程化练手
 
+## Miku-Homepage
+
+一个个人主页，部署详见 [homepage/readme](./homepage/README.md)
+
 ## 规范
 
 ### 技术规范
