@@ -68,6 +68,8 @@ router.beforeEach((to, from, next) => {
         : site["keywords"]
     );
 
+  // 图标切换
+  document.querySelector('link[rel="icon"]')?.setAttribute("href", site.icon);
   next();
 });
 

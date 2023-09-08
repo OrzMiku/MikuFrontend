@@ -12,6 +12,7 @@ const site = {
   // 站点关键字
   keywords:
     envs.VITE_SITE_KEYWORDS || "神奇の赵贰,OrzMiku,个人主页,EcyPink,MikuShow",
+  icon: envs.VITE_SITE_ICON || "/favicon.ico",
   // 是否显示初音看板娘
   miku: ((): boolean => {
     if (envs.VITE_MIKU) {
