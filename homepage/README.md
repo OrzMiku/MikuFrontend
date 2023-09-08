@@ -42,6 +42,7 @@
 | VITE_SITE_TITLE          | 站点标题             |
 | VITE_SITE_DESCRIPTION    | 站点描述             |
 | VITE_SITE_KEYWORDS       | 站点关键字(逗号隔开) |
+| VITE_SITE_ICON           | 站点图标(可选)       |
 | VITE_SITE_LINKS          | 友情链接(JSON)       |
 | VITE_SITE_NAVS           | 导航栏(JSON)         |
 | VITE_SITE_FOOTER         | 页脚信息             |
