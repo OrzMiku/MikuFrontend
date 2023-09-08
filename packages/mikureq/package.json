@@ -5,6 +5,9 @@
   "type": "module",
   "main": "./src/main.ts",
   "types": "./src/main.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
   "exports": {
     ".": {
       "import": "./src/main.ts",
