@@ -14,7 +14,8 @@
     "home:build": "pnpm --filter miku-homepage build",
     "home:build-only": "pnpm --filter miku-homepage build",
     "home:dev": "pnpm --filter miku-homepage dev",
-    "home:preview": "pnpm --filter miku-homepage preview"
+    "home:preview": "pnpm --filter miku-homepage preview",
+    "packages:build": "pnpm -w --filter \"./packages/**\" build"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",

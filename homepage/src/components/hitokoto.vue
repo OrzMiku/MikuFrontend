@@ -3,7 +3,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-import getHitokoto from "@/utils/hitikoto";
+import getHitokoto from "@miku-utils/hitokoto";
 const params = {
   c: "d",
 };
