@@ -13,15 +13,8 @@ const site = {
   keywords:
     envs.VITE_SITE_KEYWORDS || "神奇の赵贰,OrzMiku,个人主页,EcyPink,MikuShow",
   icon: envs.VITE_SITE_ICON || "/favicon.ico",
-  // 是否显示初音看板娘
-  miku: ((): boolean => {
-    if (envs.VITE_MIKU) {
-      return envs.VITE_MIKU === "true";
-    }
-    return true;
-  })(),
   // 友情链接
-  links: (() => {
+  links: ((): Array<object> => {
     if (envs.VITE_SITE_LINKS) {
       return JSON.parse(envs.VITE_SITE_LINKS);
     }
@@ -34,14 +27,6 @@ const site = {
     }
     return [
       {
-        text: "关于",
-        path: "/Home",
-      },
-      {
-        text: "友情链接",
-        path: "/Links",
-      },
-      {
         text: "Github",
         url: "https://github.com/OrzMiku",
       },
@@ -49,6 +34,20 @@ const site = {
   })(),
   foot: envs.VITE_SITE_FOOTER || "www.miku.show",
   icp: envs.VITE_SITE_ICP || "萌ICP备20233993号",
+  // 瑟图开关
+  setu: (() => {
+    if (!envs.VITE_SITE_SETU) {
+      return false;
+    }
+    return envs.VITE_SITE_SETU === "true" ? true : false;
+  })(),
+  // 是否显示初音看板娘
+  miku: ((): boolean => {
+    if (envs.VITE_MIKU) {
+      return envs.VITE_MIKU === "true";
+    }
+    return true;
+  })(),
 
   /*
    * 个人资料配置
