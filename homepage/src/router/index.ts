@@ -20,28 +20,34 @@ const router = createRouter({
         description: site["description"],
       },
     },
-    {
-      path: "/links",
-      name: "links",
-      component: () => import("@/views/links-view/index.vue"),
-      meta: {
-        title: "友情链接",
-        description: `${site["title"]} - 友情链接`,
-        keywords: "友情链接",
-      },
-    },
-    {
-      path: "/setu",
-      name: "setu",
-      component: () => import("@/views/setu-view/index.vue"),
-      meta: {
-        title: "涩图",
-        description: `${site["title"]} - 瑟瑟达咩！`,
-        keywords: "涩图",
-      },
-    },
   ],
 });
+
+if (site.setu) {
+  router.addRoute({
+    path: "/setu",
+    name: "setu",
+    component: () => import("@/views/setu-view/index.vue"),
+    meta: {
+      title: "涩图",
+      description: `${site["title"]} - 瑟瑟达咩！`,
+      keywords: "涩图",
+    },
+  });
+}
+
+if (site.links.length) {
+  router.addRoute({
+    path: "/links",
+    name: "links",
+    component: () => import("@/views/links-view/index.vue"),
+    meta: {
+      title: "友情链接",
+      description: `${site["title"]} - 友情链接`,
+      keywords: "友情链接",
+    },
+  });
+}
 
 // 信息动态切换
 router.beforeEach((to, from, next) => {
