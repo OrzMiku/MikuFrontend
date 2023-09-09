@@ -14,7 +14,7 @@ const site = {
     envs.VITE_SITE_KEYWORDS || "神奇の赵贰,OrzMiku,个人主页,EcyPink,MikuShow",
   icon: envs.VITE_SITE_ICON || "/favicon.ico",
   // 友情链接
-  links: ((): Array<object> => {
+  links: (() => {
     if (envs.VITE_SITE_LINKS) {
       return JSON.parse(envs.VITE_SITE_LINKS);
     }
